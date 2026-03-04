@@ -1,9 +1,15 @@
-export default function ExperienceDetail() {
+interface ExperienceDetailProps {
+    title: string;
+    description: string;
+    date: string;
+}
+
+export default function ExperienceDetail({ title, description, date }: ExperienceDetailProps) {
     return (
-        <article className="scale-in-ver-top bg-indigo-900 p-1 rounded-lg">
-            <h3 className="text-wrap text-xl md:text-2xl font-semibold text-gray-300">Desarrollador fullstack</h3>
-            <p className="text-gray-500 text-sm">2022 - Actualidad</p>
-            <p className="text-gray-500 text-sm">Desarrollador fullstack en una empresa de software</p>
+        <article className="scale-in-ver-top bg-blue-100 drop-shadow-xl rounded-t-lg">
+            <h3 className="text-wrap text-xl md:text-2xl font-semibold text-zinc-100 bg-indigo-900 p-1 rounded-t-lg">{title}</h3>
+            <p className="text-gray-800 text-sm">{date}</p>
+            <p className="text-gray-800 text-sm">{description}</p>
         </article>
 
     )
