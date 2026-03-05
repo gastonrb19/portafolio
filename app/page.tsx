@@ -4,6 +4,7 @@ import WrapExperiencia from "./components/WrapExperiencia";
 import Social from "./components/Social";
 import WrapProject from "./components/WrapProject";
 import Nav from "./components/Nav";
+import WrapStack from "./components/WrapStack";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       </section>
       <WrapExperiencia />
       <WrapProject />
+      <WrapStack />
     </>
   );
 }

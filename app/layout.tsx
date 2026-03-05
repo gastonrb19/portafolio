@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portafolio de Gastón Rojas",
+  title: "Portafolio Gastón Rojas",
   description: "Portafolio profesional de Gastón Rojas",
 };
 
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`${orbitron.className} ${geistMono.variable} antialiased`}
       >
