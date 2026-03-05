@@ -3,6 +3,7 @@
 import Experience from "./Experience";
 import ExperienceDetail from "./ExperienceDetail";
 import { useState } from "react";
+import Image from 'next/image';
 
 export default function WrapExperiencia() {
     const [experiences, setExperiences] = useState([
@@ -45,8 +46,8 @@ export default function WrapExperiencia() {
     ]);
     const [currentExperience, setCurrentExperience] = useState(1);
     return (
-        <section className="bg-indigo-100 py-10 px-4 grid grid-cols-2 text-center">
-            <h2 className="text-3xl font-semibold col-span-2 text-center tracking-wider bg-indigo-950 p-1 rounded-lg text-white min-w-full">Experiencia laboral</h2>
+        <section id="experiencia" className="bg-indigo-100 py-10 px-4 grid grid-cols-2 text-center">
+            <h2 className="text-3xl flex justify-center gap-2 font-semibold col-span-2 text-center tracking-wider bg-indigo-950 p-1 rounded-lg text-white min-w-full">Experiencia laboral <Image src="/experience.png" alt="icon-experience" width={30} height={30} className="w-6"/></h2>
             <p className="col-span-2 text-center mb-5 text-xs text-gray-500 italic mt-2">haz clic sobre las burbujas para ver más detalles</p>
             <article className="text-sm flex flex-col gap-2 xs:mx-auto lg:flex lg:flex-row lg:flex-wrap lg:gap-2 lg:ml-0 w-11/12">
                 {experiences.map((experience) => (

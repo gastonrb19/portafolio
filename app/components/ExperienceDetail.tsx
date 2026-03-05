@@ -6,8 +6,8 @@ interface ExperienceDetailProps {
 
 export default function ExperienceDetail({ title, description, date }: ExperienceDetailProps) {
     return (
-        <article className="scale-in-ver-top bg-blue-100 drop-shadow-xl rounded-t-lg">
-            <h3 className="text-wrap text-xl md:text-2xl font-semibold text-zinc-100 bg-indigo-900 p-1 rounded-t-lg">{title}</h3>
+        <article className="scale-in-ver-top bg-blue-100 drop-shadow-lg rounded-lg border-1 border-indigo-600 border-r-5 border-b-5">
+            <h3 className="underline text-wrap text-xl md:text-2xl font-semibold text-zinc-900 p-1">{title}</h3>
             <p className="text-gray-800 text-sm">{date}</p>
             <p className="text-gray-800 text-sm">{description}</p>
         </article>
