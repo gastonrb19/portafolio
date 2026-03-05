@@ -6,7 +6,7 @@ export default function Project({ name, id, selected, setSelectedProject }: { na
             <Link href="#" onClick={(e) => {
                 e.preventDefault();
                 setSelectedProject(id);
-            }}>{name}</Link> {selected === id ?
+            }}> {name}</Link> {selected === id ?
                 <div className="w-3 h-3 bg-amber-500 opacity-50"></div> : null}</li>
     )
 }

@@ -1,7 +1,4 @@
-'use client';
-
 import Tecnology from "./Tecnology"
-import { useState } from "react";
 
 interface tecnologies {
     id: number;
