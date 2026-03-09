@@ -13,7 +13,7 @@ interface tecnologiesProps {
 
 export default function Tecnologies({ tecnologies, selected, setSelected }: tecnologiesProps) {
     return (
-        <ul className="text-center">
+        <ul className="text-center h-50 overflow-y-scroll overflow-x-hidden w-fit px-1">
             <li className="font-bold text-center">Tecnologías</li>
             {
                 tecnologies.map((tec) => <Tecnology name={tec.name} id={tec.id} key={tec.id} selected={selected} setSelected={setSelected} />)

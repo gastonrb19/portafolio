@@ -4,6 +4,12 @@
   --breakpoint-xs: 480px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
+  --color-windows-background : #008080;
+  --color-windows-toolbar : #C0C0C0;
+  --color-win98-selected: #000080;
+  --color-windows-toolbaropacity : #B0B0B0;
+  --font-win98: "MS Sans Serif", "Tahoma", "Arial", sans-serif;
+
 }
 
 body {
