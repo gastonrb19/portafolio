@@ -1,3 +1,4 @@
+import Rover from "./Rover";
 import ToolWindow from "./ToolWindow";
 import WindowInner from "./WindowInner";
 
