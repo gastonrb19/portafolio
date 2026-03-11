@@ -1,4 +1,5 @@
 "use client";
+import { WrapFolderProps } from "./interfaces/Interfaces";
 import { useState } from "react";
 
 import DisplayTools from "./DisplayTools";
@@ -8,7 +9,11 @@ import ItemWindows from "./Item";
 import ToolBarWindows from "./ToolBar";
 import WrapIcons from "./WrapIcons";
 
-export default function NavWindows() {
+export default function NavWindows({
+  folders,
+}: {
+  folders: WrapFolderProps[];
+}) {
   const [isOpen, setOpen] = useState<boolean>(false);
   return (
     <>
@@ -17,8 +22,15 @@ export default function NavWindows() {
         <DividerWindows />
         <WrapIcons />
         <DividerWindows />
-        <ItemWindows />
-        <ItemWindows />
+        {folders
+          .filter((fold) => fold.isOpen)
+          .map((folder) => (
+            <ItemWindows
+              key={folder.id}
+              name={folder.name}
+              file_url={folder.url_image}
+            />
+          ))}
         <ClockWindows />
       </nav>
       {isOpen ? <DisplayTools /> : null}

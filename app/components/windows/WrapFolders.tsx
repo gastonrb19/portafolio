@@ -1,11 +1,33 @@
 import Folder from "./Folder";
+import { WrapFolderProps } from "./interfaces/Interfaces";
 
-export default function WrapFolders() {
+export default function WrapFolders({
+  folders,
+  currentWindow,
+  setCurrentWindow,
+  windows,
+  setWindows,
+}: {
+  folders: WrapFolderProps[];
+  currentWindow: number;
+  setCurrentWindow: (currentWindow: number) => void;
+  windows: WrapFolderProps[];
+  setWindows: (folders: WrapFolderProps[]) => void;
+}) {
   return (
     <div className="grid grid-cols-1 gap-2 p-4">
-      <Folder name="Desarrollos" url_image="/folder.png" />
-      <Folder name="Experiencia" url_image="/file.png" />
-      <Folder name="Tecnologías" url_image="/file.png" />
+      {folders.map((folder) => (
+        <Folder
+          setWindows={setWindows}
+          windows={windows}
+          id={folder.id}
+          key={folder.id}
+          name={folder.name}
+          url_image={folder.url_image}
+          currentWindow={currentWindow}
+          setCurrentWindow={setCurrentWindow}
+        />
+      ))}
     </div>
   );
 }

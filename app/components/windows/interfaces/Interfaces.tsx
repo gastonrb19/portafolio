@@ -12,3 +12,18 @@ export interface Experience {
   isCurrent: boolean;
   tecnologies: Tecnology[];
 }
+
+export interface Tecnology {
+  id: number;
+  name: string;
+}
+
+export interface WrapFolderProps {
+  id: number;
+  name: string;
+  isFile: boolean;
+  url_image: string;
+  isOpen: boolean;
+  experiences?: Experience[] | undefined;
+  tecnologies?: Tecnology[];
+}

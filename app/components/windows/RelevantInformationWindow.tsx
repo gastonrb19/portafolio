@@ -22,7 +22,7 @@ export default function RelevantInformationWindow({
         <h5 className="font-bold xs:text-sm md:text-lg">Tecnologias</h5>
         <ul>
           {tecnologies?.map((tech) => (
-            <li key={tech.id}>{tech.name}</li>
+            <li key={tech?.id}>{tech?.name}</li>
           ))}
         </ul>
       </div>
