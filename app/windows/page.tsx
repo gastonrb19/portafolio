@@ -31,22 +31,6 @@ const windowOptions = [
       },
     ],
   },
-  {
-    id: 2,
-    name: "Tecnologias",
-    isFile: true,
-    url_image: "/file.png",
-    isOpen: false,
-    experiences: undefined,
-  },
-  {
-    id: 3,
-    name: "Desarrollos",
-    isFile: false,
-    url_image: "/folder.png",
-    isOpen: false,
-    experiences: undefined,
-  },
 ];
 
 export default function Windows() {
@@ -70,7 +54,7 @@ export default function Windows() {
         {currentWindow === 0 ? (
           <></>
         ) : (
-          <Window experiences={windows[currentWindow]?.experiences} />
+          <Window experiences={windows[0]} />
         )}
       </section>
     </>

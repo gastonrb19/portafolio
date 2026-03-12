@@ -1,10 +1,10 @@
-export default function ToolWindow() {
+export default function ToolWindow({name} : {name : string}) {
   return (
     <div
       id="name-blue-bar"
       className="w-12/12 bg-win98-selected flex items-center justify-between px-1 font-bold"
     >
-      <h3>Experiencias</h3>
+      <h3>{name}</h3>
       <div
         id="div-buttons"
         className="flex justify-end gap-0.5 p-1 text-neutral-800"

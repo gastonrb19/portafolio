@@ -24,6 +24,5 @@ export interface WrapFolderProps {
   isFile: boolean;
   url_image: string;
   isOpen: boolean;
-  experiences?: Experience[] | undefined;
-  tecnologies?: Tecnology[];
+  experiences: Experience[] ;
 }
