@@ -5,7 +5,7 @@ import { useState } from "react";
 import DisplayTools from "./DisplayTools";
 import ClockWindows from "./Clock";
 import DividerWindows from "./Divider";
-import ItemWindows from "./Item";
+import ItemWindows from "./ItemWindows";
 import ToolBarWindows from "./ToolBar";
 import WrapIcons from "./WrapIcons";
 
@@ -18,12 +18,16 @@ export default function NavWindows({
   return (
     <>
       <nav className="bg-windows-toolbar p-1 flex gap-1 bottom-0 fixed w-full">
+        {/* Display all elements avaible, include shell */}
         <ToolBarWindows isOpen={isOpen} setOpen={setOpen} />
+
         <DividerWindows />
         <WrapIcons />
         <DividerWindows />
+
+        {/* Display Items that are open */}
         {folders
-          .filter((fold) => fold.isOpen)
+          .filter((fold) => fold.isOpen === true)
           .map((folder) => (
             <ItemWindows
               key={folder.id}

@@ -17,7 +17,7 @@ export default function ButtonsWindow({
         <ButtonItemWindow
           id={experience.id}
           key={experience.id}
-          name={experience.company_name}
+          name={experience.name || ""}
           setSelectedExperience={setSelectedExperience}
         />
       ))}

@@ -13,15 +13,10 @@ export default function WrapInformationWindow({
       className="p-3 text-neutral-800 grid grid-cols-1 md:grid-cols-2 xs:text-xs md:text-md gap-4 pt-5"
     >
       <h4 className="text-xl md:text-3xl text-neutral-800 font-bold md:col-span-2 text-center">
-        {experience?.company_name}
+        {experience?.name || "Información relevante"}
       </h4>
-      <RelevantInformationWindow
-        start_date={experience?.start_date}
-        finish_date={experience?.finish_date}
-        company_name={experience?.company_name}
-        tecnologies={experience?.tecnologies}
-      />
-      <DescriptionWindow description={experience?.description} />
+      {<RelevantInformationWindow experience={experience} />}
+      {<DescriptionWindow description={experience?.description} />}
     </div>
   );
 }

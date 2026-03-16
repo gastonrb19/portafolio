@@ -5,7 +5,7 @@ export default function DescriptionWindow({
 }) {
   return (
     <div className="" id="description">
-      <h5 className="font-bold xs:text-sm md:text-lg">Descripción</h5>
+      <h5 className="font-bold xs:text-sm md:text-lg">Description</h5>
       <p className="">{description}</p>
     </div>
   );

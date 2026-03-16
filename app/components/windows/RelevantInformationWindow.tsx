@@ -1,31 +1,73 @@
-import { Tecnology } from "./interfaces/Interfaces";
+import { Experience, Tecnology } from "./interfaces/Interfaces";
 export default function RelevantInformationWindow({
-  start_date,
-  finish_date,
-  company_name,
-  tecnologies,
+  experience,
 }: {
-  start_date?: string;
-  finish_date?: string;
-  company_name?: string;
-  tecnologies?: Tecnology[];
+  experience: Experience;
 }) {
-  return (
-    <>
-      <div className="" id="relevant-info">
-        <h5 className="font-bold xs:text-sm md:text-lg">Fecha</h5>
-        <p>
-          {start_date} - {finish_date || "Actualidad"}
-        </p>
-        <h5 className="font-bold xs:text-sm md:text-lg">Empresa</h5>
-        <p>{company_name}</p>
-        <h5 className="font-bold xs:text-sm md:text-lg">Tecnologias</h5>
-        <ul>
-          {tecnologies?.map((tech) => (
-            <li key={tech?.id}>{tech?.name}</li>
+  const renderValue = (value: unknown) => {
+    if (Array.isArray(value)) {
+      return (
+        <ul className="list-disc ml-5">
+          {value.map((item, idx) => (
+            <li key={`${idx}-${JSON.stringify(item)}`}>
+              {typeof item === "object" && item !== null
+                ? JSON.stringify(item)
+                : String(item)}
+            </li>
           ))}
         </ul>
-      </div>
-    </>
+      );
+    }
+
+    return <p>{value !== undefined && value !== null ? String(value) : "-"}</p>;
+  };
+
+  return (
+    <div className="" id="relevant-info">
+      {experience && Object.keys(experience).length > 0 ? (
+        Object.entries(experience)
+          .filter(
+            ([prop]) =>
+              prop !== "id" && prop !== "isCurrent" && prop !== "description" && prop !== "name",
+          )
+          .map(([prop, value]) => {
+            if (prop === "tecnologies" && Array.isArray(value)) {
+              const techNames = value
+                .map((item) => {
+                  if (
+                    typeof item === "object" &&
+                    item !== null &&
+                    "name" in item
+                  ) {
+                    // @ts-ignore
+                    return (item as Tecnology).name;
+                  }
+                  return null;
+                })
+                .filter((name) => name !== null);
+
+              return (
+                <div key={prop} className="mb-2">
+                  <h5 className="font-bold xs:text-sm md:text-lg">{prop}</h5>
+                  <ul className="list-disc ml-5">
+                    {techNames.map((name, idx) => (
+                      <li key={`${idx}-${name}`}>{name}</li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            }
+
+            return (
+              <div key={prop} className="mb-2">
+                <h5 className="font-bold xs:text-sm md:text-lg">{prop}</h5>
+                {renderValue(value)}
+              </div>
+            );
+          })
+      ) : (
+        <></>
+      )}
+    </div>
   );
 }

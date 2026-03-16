@@ -1,37 +1,10 @@
 "use client";
-import NavWindows from "../components/windows/Nav";
+import NavWindows from "../components/windows/NavWindows";
 import WrapFolders from "../components/windows/WrapFolders";
 import Window from "../components/windows/Window";
 import { useState } from "react";
 import { WrapFolderProps } from "../components/windows/interfaces/Interfaces";
-
-const windowOptions = [
-  {
-    id: 1,
-    name: "Experiencias",
-    isFile: true,
-    url_image: "/file.png",
-    isOpen: false,
-    experiences: [
-      {
-        id: 1,
-        start_date: "22/03/1999",
-        company_name: "Vida",
-        description: "Información relacionada con el puesto de la vida",
-        isCurrent: true,
-        tecnologies: [{ id: 1, name: "Node.js" }],
-      },
-      {
-        id: 2,
-        start_date: "22/03/1999",
-        company_name: "Chamba",
-        description: "Información relacionada con el puesto de la chamba",
-        isCurrent: true,
-        tecnologies: [{ id: 1, name: "Node.js" }],
-      },
-    ],
-  },
-];
+import { windowOptions } from "../components/windows/helpers/information";
 
 export default function Windows() {
   const [currentWindow, setCurrentWindow] = useState<number>(0);
@@ -40,6 +13,7 @@ export default function Windows() {
   return (
     <>
       <section className="bg-windows-background min-h-screen">
+        {/* Display elements in the desktop */}
         <WrapFolders
           setWindows={setWindows}
           windows={windows}
@@ -47,14 +21,22 @@ export default function Windows() {
           currentWindow={currentWindow}
           setCurrentWindow={setCurrentWindow}
         />
-        <NavWindows folders={windows} />
-        {/*ARREGLAR EL COMPONENTE, SEGUN LA PROPIEDAD DEL FINAL DESPLEGAR COMPONENTE DIFERENTE
-          POR TIPO (EXPERIENCIAS-experiences | TECNOLOGIES-) 
-          */}
+
+        {/*
+            Pass the option to open, not filter, because ToolBarWindows element
+            needs all the elemnts to display them, even if there aren't display yet.
+        */}
+        <NavWindows folders={windows.filter((win) => win.isOpen == true)} />
         {currentWindow === 0 ? (
           <></>
         ) : (
-          <Window experiences={windows[0]} />
+          <Window
+            windows={windows}
+            setWindows={setWindows}
+            currentWindow={currentWindow}
+            setCurrentWindow={setCurrentWindow}
+            experiences={windows.filter((win) => win.id == currentWindow)[0]}
+          />
         )}
       </section>
     </>

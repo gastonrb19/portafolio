@@ -1,5 +1,11 @@
 import Image from "next/image";
-export default function ItemWindows({name, file_url} : {name : string, file_url: string}) {
+export default function ItemWindows({
+  name,
+  file_url,
+}: {
+  name: string;
+  file_url: string;
+}) {
   return (
     <button
       className="
