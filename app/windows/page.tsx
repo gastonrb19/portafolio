@@ -8,7 +8,12 @@ import { windowOptions } from "../components/windows/helpers/information";
 
 export default function Windows() {
   const [currentWindow, setCurrentWindow] = useState<number>(0);
-  const [windows, setWindows] = useState<WrapFolderProps[]>([...windowOptions]);
+  const [windows, setWindows] = useState<WrapFolderProps[]>(
+    windowOptions.map((win) => ({
+      ...win,
+      experiences: win.experiences.filter((exp) => exp !== undefined),
+    })),
+  );
 
   return (
     <>
@@ -26,7 +31,11 @@ export default function Windows() {
             Pass the option to open, not filter, because ToolBarWindows element
             needs all the elemnts to display them, even if there aren't display yet.
         */}
-        <NavWindows folders={windows.filter((win) => win.isOpen == true)} />
+        <NavWindows 
+        windows={windows}
+        setCurrentWindow={setCurrentWindow}
+        setWindows={setWindows}
+        folders={windows.filter((win) => win.isOpen == true)} />
         {currentWindow === 0 ? (
           <></>
         ) : (

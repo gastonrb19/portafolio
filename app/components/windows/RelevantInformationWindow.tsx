@@ -2,7 +2,7 @@ import { Experience, Tecnology } from "./interfaces/Interfaces";
 export default function RelevantInformationWindow({
   experience,
 }: {
-  experience: Experience;
+  experience: Experience | undefined | null;
 }) {
   const renderValue = (value: unknown) => {
     if (Array.isArray(value)) {

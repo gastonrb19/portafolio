@@ -11,7 +11,6 @@ export default function WindowInner({
 }: {
   experiences?: Experience[];
 }) {
-  const [experience, setExperience] = useState<Experience[]>(experiences || []);
   const [selectedExperience, setSelectedExperience] = useState<number>(1);
   return (
     <div id="gap-window-inner" className="w-12/12 h-12/12 py-3 px-2">
@@ -20,11 +19,11 @@ export default function WindowInner({
         className="w-12/12 h-11/12 border-2 border-b-neutral-800 border-r-neutral-800 border-t-neutral-100 border-l-neutral-100 px-1 overflow-y-auto"
       >
         <ButtonsWindow
-          experiences={experience}
+          experiences={experiences}
           setSelectedExperience={setSelectedExperience}
         />
         <WrapInformationWindow
-          experience={experience.filter((ex) => ex.id == selectedExperience)[0]}
+          experience={experiences?.filter((ex) => ex.id == selectedExperience)[0]}
         />
       </div>
       <Rover />

@@ -11,8 +11,14 @@ import WrapIcons from "./WrapIcons";
 
 export default function NavWindows({
   folders,
+  setCurrentWindow,
+  setWindows,
+  windows,
 }: {
   folders: WrapFolderProps[];
+  setCurrentWindow: (currentWindow: number) => void;
+  setWindows: (folders: WrapFolderProps[]) => void;
+  windows: WrapFolderProps[];
 }) {
   const [isOpen, setOpen] = useState<boolean>(false);
   return (
@@ -30,6 +36,10 @@ export default function NavWindows({
           .filter((fold) => fold.isOpen === true)
           .map((folder) => (
             <ItemWindows
+              windows={windows}
+              setCurrentWindow={setCurrentWindow}
+              setWindows={setWindows}
+              id={folder.id}
               key={folder.id}
               name={folder.name}
               file_url={folder.url_image}

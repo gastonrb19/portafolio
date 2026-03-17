@@ -7,6 +7,7 @@ export interface WrapFolderProps {
   id: number;
   name: string;
   isFile: boolean;
+  isDisplay: boolean;
   url_image: string;
   isOpen: boolean;
   experiences: Experience[];

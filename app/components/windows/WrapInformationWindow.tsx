@@ -5,7 +5,7 @@ import { Experience } from "./interfaces/Interfaces";
 export default function WrapInformationWindow({
   experience,
 }: {
-  experience: Experience | null;
+  experience: Experience | null | undefined;
 }) {
   return (
     <div
