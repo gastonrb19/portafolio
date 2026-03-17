@@ -20,6 +20,7 @@ export default function NavWindows({
   setWindows: (folders: WrapFolderProps[]) => void;
   windows: WrapFolderProps[];
 }) {
+  //State for the toolbar (include shell)
   const [isOpen, setOpen] = useState<boolean>(false);
   return (
     <>
@@ -47,7 +48,14 @@ export default function NavWindows({
           ))}
         <ClockWindows />
       </nav>
-      {isOpen ? <DisplayTools /> : null}
+      {isOpen ? (
+        <DisplayTools
+          setOpen={setOpen}
+          setCurrentWindow={setCurrentWindow}
+          setWindows={setWindows}
+          windows={windows}
+        />
+      ) : null}
     </>
   );
 }

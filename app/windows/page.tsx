@@ -31,11 +31,12 @@ export default function Windows() {
             Pass the option to open, not filter, because ToolBarWindows element
             needs all the elemnts to display them, even if there aren't display yet.
         */}
-        <NavWindows 
-        windows={windows}
-        setCurrentWindow={setCurrentWindow}
-        setWindows={setWindows}
-        folders={windows.filter((win) => win.isOpen == true)} />
+        <NavWindows
+          windows={windows}
+          setCurrentWindow={setCurrentWindow}
+          setWindows={setWindows}
+          folders={windows.filter((win) => win.isOpen == true)}
+        />
         {currentWindow === 0 ? (
           <></>
         ) : (
