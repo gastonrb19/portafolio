@@ -24,7 +24,13 @@ export default function Window({
         currentWindow={currentWindow}
         name={experiences.name}
       />
-      <WindowInner experiences={experiences.experiences} />
+      <WindowInner
+        setCurrentWindow={setCurrentWindow}
+        currentWindow={currentWindow}
+        windows={windows}
+        setWindows={setWindows}
+        experiences={experiences.experiences}
+      />
     </article>
   );
 }

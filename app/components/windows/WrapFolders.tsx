@@ -15,7 +15,7 @@ export default function WrapFolders({
   setWindows: (folders: WrapFolderProps[]) => void;
 }) {
   return (
-    <div className="grid grid-cols-1 gap-2 p-4">
+    <div className="grid grid-cols-1 gap-2 p-4 text-left">
       {folders.map((folder) => (
         <Folder
           setWindows={setWindows}

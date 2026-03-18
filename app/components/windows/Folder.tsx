@@ -19,7 +19,7 @@ export default function Folder({
   setWindows: (folders: WrapFolderProps[]) => void;
 }) {
   return (
-    <div>
+    <div className="mr-auto">
       <button
         onDoubleClick={(e) => {
           setCurrentWindow(id);

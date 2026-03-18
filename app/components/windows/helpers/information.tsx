@@ -286,4 +286,13 @@ export const windowOptions = [
       },
     ],
   },
+  {
+    id: 98,
+    name: "Terminal_",
+    isFile: false,
+    url_image: "/cmd.png",
+    isOpen: false,
+    isDisplay: false,
+    experiences: [],
+  },
 ];
