@@ -7,6 +7,7 @@ import { Experience } from "./interfaces/Interfaces";
 import WindowShell from "./shell/WindowShell";
 import { WrapFolderProps } from "./interfaces/Interfaces";
 import InformationClipper from "./clipper/InformationClipper";
+import Bienvenida from "./Bievenida";
 
 //Recibe el arreglo de experiencias dentro de la experiencia obtenida
 export default function WindowInner({
@@ -22,6 +23,9 @@ export default function WindowInner({
   windows: WrapFolderProps[];
   setWindows: (folders: WrapFolderProps[]) => void;
 }) {
+  if (currentWindow === 100) {
+    return <Bienvenida />;
+  }
   if (currentWindow === 98) {
     return (
       <div

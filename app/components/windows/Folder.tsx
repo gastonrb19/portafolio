@@ -21,6 +21,7 @@ export default function Folder({
   return (
     <div className="mr-auto">
       <button
+        className="cursor-pointer active:scale-90 focus:text-white duration-200"
         onDoubleClick={(e) => {
           setCurrentWindow(id);
           setWindows(

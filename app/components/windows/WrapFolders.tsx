@@ -17,7 +17,7 @@ export default function WrapFolders({
   return (
     <div className="grid grid-cols-1 gap-2 p-4 text-left">
       {folders.map((folder) => {
-        if (folder.id === 99) {
+        if (folder.id === 99 || folder.id === 100) {
           return null;
         }
         return (

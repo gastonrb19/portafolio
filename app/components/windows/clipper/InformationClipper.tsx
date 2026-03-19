@@ -25,9 +25,15 @@ export default function InformationClipper() {
       <h3 className="font-bold text-lg">Iconos</h3>
       <p>
         Hay 2 iconos diferentes en la barra de tareas, al hacer clic en el azul
-        (linkedin), serás redirigido en una nueva pestaña a mi perfil. <br/> Lo mismo
-        pasará con el negro (github), pero en esta ocasión a mi perfil de
+        (linkedin), serás redirigido en una nueva pestaña a mi perfil. <br /> Lo
+        mismo pasará con el negro (github), pero en esta ocasión a mi perfil de
         github.
+      </p>
+      <hr className="mt-3" />
+      <h3 className="font-bold text-lg">Curriculim</h3>
+      <p>
+        En el escritorio hay un archivo "Cv-gtn.pdf", al hacer doble clic
+        descargará mi cv.
       </p>
       <hr className="mt-3" />
 

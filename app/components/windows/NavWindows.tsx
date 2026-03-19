@@ -33,19 +33,24 @@ export default function NavWindows({
         <DividerWindows />
 
         {/* Display Items that are open */}
-        {folders
-          .filter((fold) => fold.isOpen === true)
-          .map((folder) => (
-            <ItemWindows
-              windows={windows}
-              setCurrentWindow={setCurrentWindow}
-              setWindows={setWindows}
-              id={folder.id}
-              key={folder.id}
-              name={folder.name}
-              file_url={folder.url_image}
-            />
-          ))}
+        <div className="relative w-full">
+          <div className="w-full overflow-x-auto flex gap-1 flex-nowrap">
+            {folders
+              .filter((fold) => fold.isOpen === true)
+              .map((folder) => (
+                <ItemWindows
+                  windows={windows}
+                  setCurrentWindow={setCurrentWindow}
+                  setWindows={setWindows}
+                  id={folder.id}
+                  key={folder.id}
+                  name={folder.name}
+                  file_url={folder.url_image}
+                />
+              ))}
+          </div>
+          <div className="block md:hidden absolute bottom-0 left-0 right-0 h-0.5 bg-win98-selected opacity-70" />
+        </div>
         <ClockWindows />
       </nav>
       {isOpen ? (

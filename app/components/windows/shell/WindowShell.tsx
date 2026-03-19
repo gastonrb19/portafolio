@@ -51,7 +51,15 @@ export default function WindowShell({
   >([]);
 
   return (
-    <div className=" flex gap-2 flex-col h-full w-full p-4">
+    <div
+      className=" flex gap-2 flex-col h-full w-full cursor-text"
+      onClick={() => {
+        const input = document.getElementById(
+          "input-shell",
+        ) as HTMLInputElement | null;
+        input?.focus();
+      }}
+    >
       <div className="gap-2">
         {history.map((cmd, index) => (
           <div className="flex gap-2" key={index}>
@@ -65,9 +73,10 @@ export default function WindowShell({
       <div className="flex gap-2">
         <span className="text-green-600 text-nowrap text-lg">C:\</span>
         <input
+          id="input-shell"
           onKeyDown={(e) => {
             if (e.key == "Enter") {
-              const input = (e.target as HTMLInputElement).value;
+              const input = (e.target as HTMLInputElement).value.trim();
               const command = commands.filter(
                 (cmd) => cmd.command === input,
               )[0];
@@ -75,7 +84,7 @@ export default function WindowShell({
               if (!command) {
                 setHistory([
                   ...history,
-                  { command: input, message: "No se enconro el comando" },
+                  { command: input, message: "No se encontro el comando" },
                 ]);
               }
               if (command) {

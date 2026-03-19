@@ -14,7 +14,7 @@ export default function ClipperFlotante({
 }) {
   return (
     <button
-      className="z-20 right-0 absolute top-10 mouse mouse cursor-pointer"
+      className="z-20 right-0 absolute bottom-20 mouse mouse cursor-pointer"
       onClick={(e) => {
         setCurrentWindow(99);
         setWindows(

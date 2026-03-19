@@ -16,27 +16,50 @@ export default function DisplayTools({
     <>
       <div className="bg-windows-toolbar border-1 border-gray-700 shadow-lg absolute bottom-12 left-0 w-fit flex">
         <ul className="space-y-2 w-full">
-          {windows.map((win) => (
-            <ItemToolBar
-              setOpen={setOpen}
-              icon="/file.png"
-              setCurrentWindow={setCurrentWindow}
-              setWindows={setWindows}
-              windows={windows}
-              name={win.name}
-              key={win.id}
-              id={win.id}
-            />
-          ))}
-          <ItemToolBar
-            setOpen={setOpen}
-            id={0}
-            name="Ayuda"
-            icon="/clippy.png"
-            setCurrentWindow={setCurrentWindow}
-            setWindows={setWindows}
-            windows={windows}
-          />
+          {windows.map((win) => {
+            if (win.id === 100) {
+              return null;
+            }
+            if (win.id === 98) {
+              return (
+                <ItemToolBar
+                  setOpen={setOpen}
+                  icon="/cmd.png"
+                  setCurrentWindow={setCurrentWindow}
+                  setWindows={setWindows}
+                  windows={windows}
+                  name={win.name}
+                  key={win.id}
+                  id={win.id}
+                />
+              );
+            } else if (win.id === 99) {
+              return (
+                <ItemToolBar
+                  setOpen={setOpen}
+                  icon="/clippy.png"
+                  setCurrentWindow={setCurrentWindow}
+                  setWindows={setWindows}
+                  windows={windows}
+                  name={win.name}
+                  key={win.id}
+                  id={win.id}
+                />
+              );
+            }
+            return (
+              <ItemToolBar
+                setOpen={setOpen}
+                icon="/file.png"
+                setCurrentWindow={setCurrentWindow}
+                setWindows={setWindows}
+                windows={windows}
+                name={win.name}
+                key={win.id}
+                id={win.id}
+              />
+            );
+          })}
         </ul>
       </div>
     </>

@@ -6,9 +6,10 @@ import { useState } from "react";
 import { WrapFolderProps } from "../components/windows/interfaces/Interfaces";
 import { windowOptions } from "../components/windows/helpers/information";
 import ClipperFlotante from "../components/windows/clipper/ClipperFlotante";
+import CvGaston from "../components/windows/CvGaston";
 
 export default function Windows() {
-  const [currentWindow, setCurrentWindow] = useState<number>(0);
+  const [currentWindow, setCurrentWindow] = useState<number>(100);
   const [windows, setWindows] = useState<WrapFolderProps[]>(
     windowOptions.map((win) => ({
       ...win,
@@ -27,6 +28,9 @@ export default function Windows() {
           currentWindow={currentWindow}
           setCurrentWindow={setCurrentWindow}
         />
+
+        <CvGaston />
+
         <ClipperFlotante
           currentWindow={currentWindow}
           setCurrentWindow={setCurrentWindow}

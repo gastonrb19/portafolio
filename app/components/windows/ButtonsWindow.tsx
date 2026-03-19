@@ -11,7 +11,7 @@ export default function ButtonsWindow({
   return (
     <div
       id="buttons-section"
-      className="xs:text-xs md:text-md text-neutral-800 flex flex-wrap -ml-1 "
+      className="xs:text-xs md:text-md text-neutral-800 flex flex-wrap -ml-1"
     >
       {experiences?.map((experience) => (
         <ButtonItemWindow
