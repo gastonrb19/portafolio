@@ -5,6 +5,7 @@ import Window from "../components/windows/Window";
 import { useState } from "react";
 import { WrapFolderProps } from "../components/windows/interfaces/Interfaces";
 import { windowOptions } from "../components/windows/helpers/information";
+import ClipperFlotante from "../components/windows/clipper/ClipperFlotante";
 
 export default function Windows() {
   const [currentWindow, setCurrentWindow] = useState<number>(0);
@@ -25,6 +26,12 @@ export default function Windows() {
           folders={windows}
           currentWindow={currentWindow}
           setCurrentWindow={setCurrentWindow}
+        />
+        <ClipperFlotante
+          currentWindow={currentWindow}
+          setCurrentWindow={setCurrentWindow}
+          setWindows={setWindows}
+          windows={windows}
         />
 
         {/*

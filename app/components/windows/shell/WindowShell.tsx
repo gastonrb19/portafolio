@@ -75,7 +75,7 @@ export default function WindowShell({
               if (!command) {
                 setHistory([
                   ...history,
-                  { command: input, message: "Command not found" },
+                  { command: input, message: "No se enconro el comando" },
                 ]);
               }
               if (command) {

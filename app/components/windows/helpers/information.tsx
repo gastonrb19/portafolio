@@ -295,4 +295,13 @@ export const windowOptions = [
     isDisplay: false,
     experiences: [],
   },
+  {
+    id: 99,
+    name: "Ayuda",
+    isFile: false,
+    url_image: "/clippy.png",
+    isOpen: false,
+    isDisplay: false,
+    experiences: [],
+  },
 ];
