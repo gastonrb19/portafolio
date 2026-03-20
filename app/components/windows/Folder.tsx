@@ -1,22 +1,23 @@
 import Image from "next/image";
 import { WrapFolderProps } from "./interfaces/Interfaces";
+import { StaticImageData } from "next/image";
 
 export default function Folder({
   id,
   name,
-  url_image,
   currentWindow,
   setCurrentWindow,
   windows,
   setWindows,
+  image,
 }: {
   id: number;
   name: string;
-  url_image: string;
   currentWindow: number;
   setCurrentWindow: (currentWindow: number) => void;
   windows: WrapFolderProps[];
   setWindows: (folders: WrapFolderProps[]) => void;
+  image: StaticImageData;
 }) {
   return (
     <div className="mr-auto">
@@ -37,7 +38,7 @@ export default function Folder({
         <Image
           width={50}
           height={50}
-          src={url_image}
+          src={image}
           alt="folder"
           className="mx-auto"
         />

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import win from "@/public/windows-98.png";
 
 interface ToolBarWindowsProps {
   isOpen: boolean;
@@ -18,7 +19,7 @@ export default function ToolBarWindows({
       <Image
         width={30}
         height={30}
-        src="/windows-98.png"
+        src={win}
         alt="icon-win"
         className="w-[30px] h-[30px] min-w-[30px] min-h-[30px]"
       />

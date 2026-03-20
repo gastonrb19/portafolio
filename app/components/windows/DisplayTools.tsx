@@ -1,5 +1,8 @@
 import ItemToolBar from "./ItemToolBar";
 import { WrapFolderProps } from "./interfaces/Interfaces";
+import cmd from "@/public/cmd.png";
+import file from "@/public/file.png";
+import clippy from "@/public/clippy.png";
 
 export default function DisplayTools({
   windows,
@@ -24,7 +27,7 @@ export default function DisplayTools({
               return (
                 <ItemToolBar
                   setOpen={setOpen}
-                  icon="/cmd.png"
+                  icon={cmd}
                   setCurrentWindow={setCurrentWindow}
                   setWindows={setWindows}
                   windows={windows}
@@ -37,7 +40,7 @@ export default function DisplayTools({
               return (
                 <ItemToolBar
                   setOpen={setOpen}
-                  icon="/clippy.png"
+                  icon={clippy}
                   setCurrentWindow={setCurrentWindow}
                   setWindows={setWindows}
                   windows={windows}
@@ -50,7 +53,7 @@ export default function DisplayTools({
             return (
               <ItemToolBar
                 setOpen={setOpen}
-                icon="/file.png"
+                icon={file}
                 setCurrentWindow={setCurrentWindow}
                 setWindows={setWindows}
                 windows={windows}

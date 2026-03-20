@@ -8,6 +8,9 @@ import DividerWindows from "./Divider";
 import ItemWindows from "./ItemWindows";
 import ToolBarWindows from "./ToolBar";
 import WrapIcons from "./WrapIcons";
+import cmd from "@/public/cmd.png";
+import file from "@/public/file.png";
+import clippy from "@/public/clippy.png";
 
 export default function NavWindows({
   folders,
@@ -45,7 +48,7 @@ export default function NavWindows({
                   id={folder.id}
                   key={folder.id}
                   name={folder.name}
-                  file_url={folder.url_image}
+                  file={folder.id === 98 ? cmd : file}
                 />
               ))}
           </div>

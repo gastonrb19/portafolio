@@ -1,4 +1,5 @@
 import Image from "next/image";
+import clippy from "@/public/clippy.png";
 import { WrapFolderProps } from "../interfaces/Interfaces";
 
 export default function ClipperFlotante({
@@ -29,7 +30,7 @@ export default function ClipperFlotante({
     >
       <Image
         alt="clipper-flotante"
-        src={"/clippy.png"}
+        src={clippy}
         width={80}
         height={80}
         className="w-15 md:w-20 hover:w-20 md:hover:w-25 duration-300"

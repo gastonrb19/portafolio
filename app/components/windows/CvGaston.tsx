@@ -1,9 +1,12 @@
+"uce client";
+
 import Image from "next/image";
+import file from "@/public/file.png";
 
 export default function CvGaston() {
   const downloadCv = () => {
     const link = document.createElement("a");
-    link.href = "/cv.pdf";
+    link.href = "/portafolio/cv.pdf";
     link.download = "cv-gaston-rojasb.pdf";
     document.body.appendChild(link);
     link.click();
@@ -20,7 +23,7 @@ export default function CvGaston() {
     >
       <Image
         alt="cv-icon-gaston"
-        src={"/file.png"}
+        src={file}
         width={50}
         height={30}
         className="ml-5"

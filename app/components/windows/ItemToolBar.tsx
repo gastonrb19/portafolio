@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { WrapFolderProps } from "./interfaces/Interfaces";
 
 export default function ItemToolBar({
@@ -12,7 +12,7 @@ export default function ItemToolBar({
 }: {
   id: number;
   name: string;
-  icon: string;
+  icon: StaticImageData
   windows: WrapFolderProps[];
   setCurrentWindow: (currentWindow: number) => void;
   setWindows: (folders: WrapFolderProps[]) => void;
