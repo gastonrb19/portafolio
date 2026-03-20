@@ -24,7 +24,7 @@ export default function ToolWindow({
         className="flex justify-end gap-0.5 p-1 text-neutral-800"
       >
         <button
-          className="border-1 w-5 bg-windows-toolbar"
+          className="border-1 w-5 bg-windows-toolbar cursor-pointer"
           onClick={(e) => {
             setCurrentWindow(0);
           }}
@@ -32,7 +32,7 @@ export default function ToolWindow({
           -
         </button>
         <button
-          className="border-1 w-5 bg-windows-toolbar"
+          className="border-1 w-5 bg-windows-toolbar cursor-pointer"
           onClick={(e) => {
             setWindows(
               windows.map((win) => {
