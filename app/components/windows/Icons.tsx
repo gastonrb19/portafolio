@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 interface PropsIcons {
-  image : StaticImageData
+  image: StaticImageData;
   link_redirection: string;
 }
 
