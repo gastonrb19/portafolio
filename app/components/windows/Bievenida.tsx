@@ -10,9 +10,9 @@ export default function Bienvenida() {
         id="window-inner"
         className="w-12/12 h-11/12 border-2 border-b-neutral-800 border-r-neutral-800 border-t-neutral-100 border-l-neutral-100 px-3 overflow-y-auto p-3"
       >
-        <h2 className="font-semibold text-lg">¡Bienvenid@!</h2>
+        <h2 className="font-semibold text-lg">¡Hola!</h2>
         <p>
-          Bienvenido a mi portafolio... <br />
+          Este es mi portafolio... <br />
           Esta inspirado en win 98, así que te invito a interactuar con todo lo
           que quieras. <br />
           <br />
