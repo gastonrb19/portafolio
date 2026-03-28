@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# <Portafolio Win 98/>
 
-## Getting Started
+¡Hola! Mi nombre es Gastón Rojas y este es mi pequeño portafolio inspirado en la interfaz gráfica de windows 98. 
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologías utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Front-end:** React, Next.Js, TailwindCSS.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Versiones del proyecto
+A pesar de que es un pequeño portafolio procuro mantenerlo y realizar mejoras durante cierto tiempo en este proyecto. En esta pequeña sección puedes ver las diferentes versiones realizadas.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ ### Versión 0.0.1 (Terminada)
 
-## Learn More
+#### Funcionalidades introducidas
+- Interactuar con shell.
+- Desplegar ventana.
+- Minimizar y cerrar ventanas.
+- Ver secciones en ventana abierta.
+- Desplegar herramientas (toolbar).
+- Modelo responsivo.
+#### Tecnologías utilizadas 
+    Front-End : ["Tailwind", "React", "Next.js"],
+    Otras : ["Git", "Github"]
 
-To learn more about Next.js, take a look at the following resources:
+ ### Versión 0.0.5 (En proceso)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Funcionalidades introducidas
+    1. Iniciar sesión
+    2. Window media player
+        2a. Ver top 10 canciones.
+        2b. Ver Top 3 albúm.
+        2c. Reproducir previa.
+        2d.  Ir a la canción en spotify.
+#### Tecnologías utilizadas 
+    Front-End : ["Tailwind", "React", "Next.js"],
+    Otras : ["Git", "Github", "OAuth2.0", "Spotify API"]

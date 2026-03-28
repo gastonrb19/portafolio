@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Portafolio Gastón Rojas",
-  description: "Portafolio profesional de Gastón Rojas",
+  description: "Portafolio inspirado en win 98, hecho por Gastón Rojas",
 };
 
 export default function RootLayout({
