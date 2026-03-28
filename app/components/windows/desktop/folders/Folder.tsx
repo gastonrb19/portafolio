@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { WrapFolderProps } from "./interfaces/Interfaces";
+import { WrapFolderProps } from "../../interfaces/Interfaces";
 import { StaticImageData } from "next/image";
 
 export default function Folder({
