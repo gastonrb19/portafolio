@@ -1,6 +1,6 @@
 import DescriptionWindow from "./DescriptionWindow";
 import RelevantInformationWindow from "./RelevantInformationWindow";
-import { Experience } from "./interfaces/Interfaces";
+import { Experience } from "../../interfaces/Interfaces";
 
 export default function WrapInformationWindow({
   experience,

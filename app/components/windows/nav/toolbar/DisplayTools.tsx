@@ -1,5 +1,5 @@
 import ItemToolBar from "./ItemToolBar";
-import { WrapFolderProps } from "./interfaces/Interfaces";
+import { WrapFolderProps } from "../../interfaces/Interfaces";
 import cmd from "@/public/cmd.png";
 import file from "@/public/file.png";
 import clippy from "@/public/clippy.png";

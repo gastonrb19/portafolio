@@ -1,4 +1,4 @@
-import Rover from "./Rover";
+import Rover from "../window_desktop/Rover";
 
 export default function Bienvenida() {
   return (

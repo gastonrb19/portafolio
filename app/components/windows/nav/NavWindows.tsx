@@ -1,16 +1,15 @@
 "use client";
-import { WrapFolderProps } from "./interfaces/Interfaces";
+import { WrapFolderProps } from "../interfaces/Interfaces";
 import { useState } from "react";
 
-import DisplayTools from "./DisplayTools";
+import DisplayTools from "./toolbar/DisplayTools";
 import ClockWindows from "./Clock";
 import DividerWindows from "./Divider";
-import ItemWindows from "./ItemWindows";
-import ToolBarWindows from "./ToolBar";
-import WrapIcons from "./WrapIcons";
+import ItemWindows from "./open-minimized-item/ItemWindows";
+import ButtonToolBar from "./toolbar/ButtonToolBar";
+import WrapIcons from "./icons/WrapIcons";
 import cmd from "@/public/cmd.png";
 import file from "@/public/file.png";
-import clippy from "@/public/clippy.png";
 
 export default function NavWindows({
   folders,
@@ -29,7 +28,7 @@ export default function NavWindows({
     <>
       <nav className="bg-windows-toolbar p-1 flex gap-1 bottom-0 fixed w-full">
         {/* Display all elements avaible, include shell */}
-        <ToolBarWindows isOpen={isOpen} setOpen={setOpen} />
+        <ButtonToolBar isOpen={isOpen} setOpen={setOpen} />
 
         <DividerWindows />
         <WrapIcons />

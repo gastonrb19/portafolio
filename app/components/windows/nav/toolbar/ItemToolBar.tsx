@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import { WrapFolderProps } from "./interfaces/Interfaces";
+import { WrapFolderProps } from "../../interfaces/Interfaces";
 
 export default function ItemToolBar({
   id = 0, // if 0 display clipper
@@ -12,7 +12,7 @@ export default function ItemToolBar({
 }: {
   id: number;
   name: string;
-  icon: StaticImageData
+  icon: StaticImageData;
   windows: WrapFolderProps[];
   setCurrentWindow: (currentWindow: number) => void;
   setWindows: (folders: WrapFolderProps[]) => void;

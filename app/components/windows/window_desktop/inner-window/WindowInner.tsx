@@ -1,13 +1,13 @@
 "use client";
 import { useState } from "react";
 import ButtonsWindow from "./ButtonsWindow";
-import Rover from "./Rover";
+import Rover from "../Rover";
 import WrapInformationWindow from "./WrapInformationWindow";
-import { Experience } from "./interfaces/Interfaces";
-import WindowShell from "./shell/WindowShell";
-import { WrapFolderProps } from "./interfaces/Interfaces";
-import InformationClipper from "./clipper/InformationClipper";
-import Bienvenida from "./Bievenida";
+import { Experience } from "../../interfaces/Interfaces";
+import WindowShell from "../../shell/WindowShell";
+import { WrapFolderProps } from "../../interfaces/Interfaces";
+import InformationClipper from "../../desktop/clipper/InformationClipper";
+import Bienvenida from "../../bienvenida/Bievenida";
 
 //Recibe el arreglo de experiencias dentro de la experiencia obtenida
 export default function WindowInner({

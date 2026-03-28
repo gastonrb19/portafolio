@@ -6,7 +6,7 @@ interface ToolBarWindowsProps {
   setOpen: (isOpen: boolean) => void;
 }
 
-export default function ToolBarWindows({
+export default function ButtonToolBar({
   isOpen,
   setOpen,
 }: ToolBarWindowsProps) {

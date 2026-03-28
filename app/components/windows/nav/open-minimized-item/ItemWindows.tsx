@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import { WrapFolderProps } from "./interfaces/Interfaces";
+import { WrapFolderProps } from "../../interfaces/Interfaces";
 
 export default function ItemWindows({
   id,

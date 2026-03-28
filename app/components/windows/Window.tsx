@@ -1,6 +1,6 @@
 import { WrapFolderProps } from "./interfaces/Interfaces";
-import ToolWindow from "./ToolWindow";
-import WindowInner from "./WindowInner";
+import ToolWindow from "./window_desktop/buttons-window/ToolWindow";
+import WindowInner from "./window_desktop/inner-window/WindowInner";
 
 export default function Window({
   experiences,

@@ -1,5 +1,5 @@
 import ButtonItemWindow from "./ButtonItemWindow";
-import { Experience } from "./interfaces/Interfaces";
+import { Experience } from "../../interfaces/Interfaces";
 
 export default function ButtonsWindow({
   experiences,

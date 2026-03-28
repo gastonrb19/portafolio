@@ -1,4 +1,4 @@
-import { Experience, Tecnology } from "./interfaces/Interfaces";
+import { Experience, Tecnology } from "../interfaces/Interfaces";
 export default function RelevantInformationWindow({
   experience,
 }: {

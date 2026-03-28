@@ -1,12 +1,12 @@
 "use client";
-import NavWindows from "./components/windows/NavWindows";
-import WrapFolders from "./components/windows/WrapFolders";
+import NavWindows from "./components/windows/nav/NavWindows";
+import WrapFolders from "./components/windows/desktop/folders/WrapFolders";
 import Window from "./components/windows/Window";
 import { useState } from "react";
 import { WrapFolderProps } from "./components/windows/interfaces/Interfaces";
 import { windowOptions } from "./components/windows/helpers/information";
-import ClipperFlotante from "./components/windows/clipper/ClipperFlotante";
-import CvGaston from "./components/windows/CvGaston";
+import ClipperFlotante from "./components/windows/desktop/clipper/ClipperFlotante";
+import CvGaston from "./components/windows/desktop/CvGaston";
 
 export default function Windows() {
   const [currentWindow, setCurrentWindow] = useState<number>(100);

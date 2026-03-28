@@ -1,6 +1,6 @@
 import Image from "next/image";
 import clippy from "@/public/clippy.png";
-import { WrapFolderProps } from "../interfaces/Interfaces";
+import { WrapFolderProps } from "../../interfaces/Interfaces";
 
 export default function ClipperFlotante({
   currentWindow,
