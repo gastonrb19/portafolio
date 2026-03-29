@@ -26,7 +26,7 @@ A pesar de que es un pequeño portafolio procuro mantenerlo y realizar mejoras d
  ### Versión 0.0.5 (En proceso)
 
 #### Funcionalidades introducidas
-    1. Iniciar sesión
+    1. Animación inicial
     2. Window media player
         2a. Ver top 10 canciones.
         2b. Ver Top 3 albúm.
