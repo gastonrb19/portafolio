@@ -20,4 +20,123 @@ html {
   scroll-behavior: smooth;
 }
 
+.linea {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  margin: 5px 0;
+  font-size: 1.5rem;
+  border-right: 10px solid transparent; /* El cursor inicia invisible */
+}
 
+/* --- ANIMACIONES --- */
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: var(--color-windows-toolbar); }
+}
+
+/* --- APLICACIÓN SECUENCIAL --- */
+
+/* Línea 1: Escribe y parpadea por 2s, luego quita el cursor */
+.l1 {
+  font-size: 20px;
+  animation: 
+    typing 1s steps(15) forwards,
+    blink 1s step-end infinite;
+  animation-iteration-count: 1,1; /* El parpadeo solo dura 4 ciclos (2s) */
+}
+
+/* Línea 2: Espera 2s, luego escribe y parpadea otros 2s */
+.l2 {
+  font-size : 20px;
+  animation: 
+    typing 1s steps(15) 1s forwards,
+    blink 1s step-end 1s infinite;
+  animation-iteration-count: 1, 1;
+}
+
+/* Línea 3: Espera 4s, escribe y el cursor se queda parpadeando al final */
+.l3 {
+    font-size: 20px;
+  animation: 
+    typing 1s steps(15) 2s forwards,
+    blink 1s step-end 2s infinite;
+}
+
+/* Botón Final */
+.fade-in {
+  opacity: 0;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+  animation: fadeIn 0.8s ease forwards 3.3s;
+}
+
+.fade-in:hover {
+  background: white;;
+  color: var(--color-win98-selected);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+@media screen and (max-width: 480px) {
+  .l1 {
+    font-size: 0.60rem;
+  }
+  .l2 {
+    font-size: 0.60rem;  
+  }
+  .l3 {
+    font-size: 0.60rem;  
+  }
+}
+
+
+@keyframes dissolve {
+  0% {
+    opacity: 0;
+    filter: brightness(2) contrast(3) blur(10px);
+    backdrop-filter: pixelate(10px); /* Si el navegador lo soporta */
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) contrast(1) blur(0px);
+  }
+}
+
+.pixel-in {
+  position: relative;
+  animation: dissolve 1.2s ease-out forwards;
+}
+
+/* El truco del "Dither" (punteado) de los 90 */
+.pixel-in::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Crea un patrón de puntos negros */
+  background-image: radial-gradient(rgba(0,0,0,0.2) 1px, transparent 0);
+  background-size: 3px 3px; 
+  animation: fadeOutDither 1.5s forwards;
+}
+
+@keyframes fadeOutDither {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}

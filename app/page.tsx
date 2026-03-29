@@ -2,13 +2,15 @@
 import NavWindows from "./components/windows/nav/NavWindows";
 import WrapFolders from "./components/windows/desktop/folders/WrapFolders";
 import Window from "./components/windows/Window";
-import { useState } from "react";
+import { use, useState } from "react";
 import { WrapFolderProps } from "./components/windows/interfaces/Interfaces";
 import { windowOptions } from "./components/windows/helpers/information";
 import ClipperFlotante from "./components/windows/desktop/clipper/ClipperFlotante";
 import CvGaston from "./components/windows/desktop/CvGaston";
+import StartSystem from "./components/start/StartSystem";
 
 export default function Windows() {
+  const [started, setStarted] = useState<boolean>(false);
   const [currentWindow, setCurrentWindow] = useState<number>(100);
   const [windows, setWindows] = useState<WrapFolderProps[]>(
     windowOptions.map((win) => ({
@@ -17,9 +19,13 @@ export default function Windows() {
     })),
   );
 
+  if (!started) {
+    return <StartSystem setStarted={setStarted} />;
+  }
+
   return (
     <>
-      <section className="bg-windows-background min-h-screen">
+      <section className="bg-windows-background min-h-screen desktop pixel-in">
         {/* Display elements in the desktop */}
         <WrapFolders
           setWindows={setWindows}
