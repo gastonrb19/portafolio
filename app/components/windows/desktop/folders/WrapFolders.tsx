@@ -2,7 +2,7 @@ import Folder from "./Folder";
 import { WrapFolderProps } from "../../interfaces/Interfaces";
 import file from "@/public/file.png";
 import cmd from "@/public/cmd.png";
-
+import music from "@/public/media-player.png";
 
 export default function WrapFolders({
   folders,
@@ -34,6 +34,20 @@ export default function WrapFolders({
               currentWindow={currentWindow}
               setCurrentWindow={setCurrentWindow}
               image={cmd}
+            />
+          );
+        }
+        if (folder.id === 101) {
+          return (
+            <Folder
+              setWindows={setWindows}
+              windows={windows}
+              id={folder.id}
+              key={folder.id}
+              name={folder.name}
+              currentWindow={currentWindow}
+              setCurrentWindow={setCurrentWindow}
+              image={music}
             />
           );
         }

@@ -3,6 +3,7 @@ import { WrapFolderProps } from "../../interfaces/Interfaces";
 import cmd from "@/public/cmd.png";
 import file from "@/public/file.png";
 import clippy from "@/public/clippy.png";
+import music from "@/public/media-player.png";
 
 export default function DisplayTools({
   windows,
@@ -41,6 +42,19 @@ export default function DisplayTools({
                 <ItemToolBar
                   setOpen={setOpen}
                   icon={clippy}
+                  setCurrentWindow={setCurrentWindow}
+                  setWindows={setWindows}
+                  windows={windows}
+                  name={win.name}
+                  key={win.id}
+                  id={win.id}
+                />
+              );
+            } else if (win.id === 101) {
+              return (
+                <ItemToolBar
+                  setOpen={setOpen}
+                  icon={music}
                   setCurrentWindow={setCurrentWindow}
                   setWindows={setWindows}
                   windows={windows}

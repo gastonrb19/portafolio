@@ -313,4 +313,14 @@ export const windowOptions = [
     isDisplay: false,
     experiences: [],
   },
+{
+    id: 101,
+    name: "Mi música",
+    isFile: false,
+    url_image: "/media-player.png",
+    isOpen: true,
+    isDisplay: false,
+    experiences: [],
+  },
+
 ];
